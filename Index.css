@@ -1,0 +1,94 @@
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+}
+
+/* 1. Encabezado: Logo y Título alineados */
+.Encabezado {
+    display: flex;
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 20px;           /* Espacio entre logo y texto */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.Encabezado img {
+    height: 60px; /* Tamaño del logo */
+}
+
+/* 2. Misión y Visión: Uno al lado del otro */
+.Mision, .Vision {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1; /* Hace que ambos ocupen el mismo ancho */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Mision-Vision-Container img {
+    width: 50px;
+    height: 50px;
+    background-color: #ecf0f1; /* Placeholder si no hay imagen */
+    margin-bottom: 10px;
+    /*border-radius: 50%;*/
+    
+}
+
+/* Contenedor que envuelve Misión y Visión */
+.Mision-Vision-Container { /* Nota abajo sobre este cambio */
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* 3. Objetivos: Fila principal */
+h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.Objetivos {
+    display: flex;
+    justify-content: space-between; /* Los separa equitativamente */
+    gap: 20px;
+}
+
+/* Objetivos internos: Imagen arriba, Texto abajo (Flex-Col) */
+.Objetivo1, .Objetivo2, .Objetivo3 {
+    display: flex;
+    flex-direction: column; /* Alineación vertical */
+    align-items: center;    /* Centra la imagen y el texto */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    border-bottom: 4px solid #3498db; /* Un detalle visual */
+}
+
+.Objetivos img {
+    width: 50px;
+    height: 50px;
+    background-color: #ecf0f1; /* Placeholder si no hay imagen */
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+p {
+    text-align: justify;
+}
