@@ -6,10 +6,18 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+h1 {
+    color: rgb(231, 169, 88);
+}
+
 body {
     background-color: #f4f7f6;
     color: #333;
     padding: 20px;
+}
+
+.Nombre {
+    color: rgb(231, 169, 88);
 }
 
 /* 1. Encabezado: Logo y Título alineados */
@@ -41,8 +49,9 @@ body {
     font-size: 2rem;      /* Tamaño sutil */
     text-transform: uppercase; /* Mayúsculas profesionales */
     letter-spacing: 2px;     /* Aire entre letras, estilo editorial */
-    color: #666;             /* Gris suave para no competir con el h2 */
+    color: #c0b73c;             /* Gris suave para no competir con el h2 */
     margin-bottom: 5px;      /* Espacio hacia el nombre */
+    font-weight: bold;
 }
 
 /* El h2 se mantiene con su estilo por defecto, 
@@ -58,7 +67,7 @@ h2 {
 
 /* 2. Misión y Visión: Uno al lado del otro */
 .Mision, .Vision {
-    background-color: #fff;
+    background-color: #FDF1E2;
     padding: 25px;
     border-radius: 10px;
     flex: 1; /* Hace que ambos ocupen el mismo ancho */
@@ -73,8 +82,11 @@ h2 {
     height: 50px;
     background-color: #ecf0f1; /* Placeholder si no hay imagen */
     margin-bottom: 10px;
-    /*border-radius: 50%;*/
-    
+    /*border-radius: 50%;*/ 
+}
+
+.Mision-Vision-Container h2 {
+    color: rgb(231, 169, 88);
 }
 
 /* Contenedor que envuelve Misión y Visión */
@@ -101,7 +113,7 @@ h2 {
     display: flex;
     flex-direction: column; /* Alineación vertical */
     align-items: center;    /* Centra la imagen y el texto */
-    background-color: #fff;
+    background-color: #FDF1E2;
     padding: 20px;
     border-radius: 10px;
     flex: 1;
@@ -119,4 +131,8 @@ h2 {
 
 p {
     text-align: justify;
+}
+
+.Objetivos_Titulo {
+    color: rgb(231, 169, 88);
 }
