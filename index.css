@@ -16,16 +16,44 @@ body {
 .Encabezado {
     display: flex;
     align-items: center; /* Alinea verticalmente al centro */
-    gap: 20px;           /* Espacio entre logo y texto */
+    gap: 50px;           /* Espacio entre logo y texto */
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding-left: 50px;
 }
 
 .Encabezado img {
-    height: 60px; /* Tamaño del logo */
+    height: 100px; /* Tamaño del logo */
+}
+
+.Imagen_editora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.tag-editorial {
+    font-size: 2rem;      /* Tamaño sutil */
+    text-transform: uppercase; /* Mayúsculas profesionales */
+    letter-spacing: 2px;     /* Aire entre letras, estilo editorial */
+    color: #666;             /* Gris suave para no competir con el h2 */
+    margin-bottom: 5px;      /* Espacio hacia el nombre */
+}
+
+/* El h2 se mantiene con su estilo por defecto, 
+   solo nos aseguramos de que no tenga márgenes extraños */
+h2 {
+    margin: 0;
+}
+
+.Imagen_editora img {
+    height: 250px;
+    border-radius: 100%;
 }
 
 /* 2. Misión y Visión: Uno al lado del otro */
@@ -82,7 +110,7 @@ h2 {
 }
 
 .Objetivos img {
-    width: 50px;
+    /*width: 50px;*/
     height: 50px;
     background-color: #ecf0f1; /* Placeholder si no hay imagen */
     margin-bottom: 10px;
