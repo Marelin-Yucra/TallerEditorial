@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    font-family: 'Arial', sans-serif;
 }
 
 h1 {
@@ -11,7 +12,7 @@ h1 {
 }
 
 body {
-    background-color: #f4f7f6;
+    background-color: #e9e9e4;
     color: #333;
     padding: 20px;
 }
@@ -21,37 +22,93 @@ body {
 }
 
 /* 1. Encabezado: Logo y Título alineados */
-.Encabezado {
+.LogRed {
+    width: 100%;
     display: flex;
-    align-items: center; /* Alinea verticalmente al centro */
-    gap: 50px;           /* Espacio entre logo y texto */
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding-left: 50px;
+    height: 7vh;
+    gap: 2vw
 }
 
-.Encabezado img {
+.Logo {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinea verticalmente al centro */
+}
+
+.Logo img {
     height: 100px; /* Tamaño del logo */
 }
 
-.Imagen_editora {
+.NavBar {
+    width: 100%;
+    height: 10vh;
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    text-align: center;
-    padding: 20px;
 }
 
-.tag-editorial {
-    font-size: 2rem;      /* Tamaño sutil */
-    text-transform: uppercase; /* Mayúsculas profesionales */
-    letter-spacing: 2px;     /* Aire entre letras, estilo editorial */
-    color: #c0b73c;             /* Gris suave para no competir con el h2 */
-    margin-bottom: 5px;      /* Espacio hacia el nombre */
+.NavBar div {
     font-weight: bold;
+}
+
+.MiddleSpace {
+    width: 100%;
+    min-height: 500px; /* Ajusta la altura según necesites */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    padding: 60px; /* Margen interno general */
+    box-sizing: border-box;
+    background: 
+        /* Degradado suave de derecha a izquierda */
+        linear-gradient(to left, transparent 40%, #f0e5d6 50%), 
+        url('Middle.jpeg') right center / 50% 100% no-repeat;
+}
+
+.content-left {
+    max-width: 45%; /* Hace que el texto ocupe solo el lado izquierdo y no toque la foto */
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Espaciado uniforme entre los textos */
+}
+
+/* --- ESTILOS DE TEXTO (Estilo Canva) --- */
+
+/* Etiqueta pequeña superior (ej. "BLOG" o "EDITORIAL") */
+.category-tag {
+    font-family: 'Arial', sans-serif; /* Cambiar por tu fuente sans-serif corporativa */
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #b86b3b; /* Color marrón / óxido */
+}
+
+/* Título Principal "AWANA" */
+.main-title {
+    font-family: 'Georgia', serif; /* Usamos una fuente Serif elegante */
+    font-size: 54px; /* Grande y dominante */
+    font-weight: bold;
+    color: #112e38; /* Azul muy oscuro/petróleo de tu logo */
+    margin: 0;
+    line-height: 1;
+}
+
+/* Subtítulo "Historias que entretejen..." */
+.sub-title {
+    font-family: 'Georgia', serif;
+    font-size: 32px;
+    font-weight: normal;
+    color: #b86b3b; /* Color marrón / óxido del telar */
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Párrafo descriptivo */
+.description-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2c3e50; /* Un gris muy oscuro para lectura cómoda */
+    margin-top: 10px;
 }
 
 /* El h2 se mantiene con su estilo por defecto, 
@@ -60,21 +117,21 @@ h2 {
     margin: 0;
 }
 
-.Imagen_editora img {
-    height: 250px;
-    border-radius: 100%;
-}
-
 /* 2. Misión y Visión: Uno al lado del otro */
 .Mision, .Vision {
-    background-color: #FDF1E2;
+    background-color: #f0e5d6;
     padding: 25px;
     border-radius: 10px;
     flex: 1; /* Hace que ambos ocupen el mismo ancho */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.Mision-Vision-Container p {
+    text-align: center;
+    padding: 20px 0 0 20px;
 }
 
 .Mision-Vision-Container img {
@@ -82,11 +139,11 @@ h2 {
     height: 50px;
     background-color: #ecf0f1; /* Placeholder si no hay imagen */
     margin-bottom: 10px;
-    /*border-radius: 50%;*/ 
+    border-radius: 50%;
 }
 
 .Mision-Vision-Container h2 {
-    color: rgb(231, 169, 88);
+    color: #24568f;
 }
 
 /* Contenedor que envuelve Misión y Visión */
@@ -94,6 +151,29 @@ h2 {
     display: flex;
     gap: 20px;
     margin-bottom: 30px;
+}
+
+.Foto {
+    flex: 1; /* Hace que ocupe el mismo ancho que Misión y Visión */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center;     /* Centrado horizontal */
+    background-color: #f0e5d6; /* Opcional: por si quieres que tenga el mismo fondo que los otros bloques */
+    border-radius: 10px;       /* Opcional: por si lleva el mismo diseño */
+    padding: 25px;             /* Opcional: para mantener simetría */
+    gap: 2vh;
+}
+
+.Foto img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover; /* Evita que la foto se estire feo si no es cuadrada */
+    border-radius: 0;
+}
+
+.Foto div {
+    font-weight: bold;
 }
 
 /* 3. Objetivos: Fila principal */
@@ -108,17 +188,20 @@ h2 {
     gap: 20px;
 }
 
+.Objetivos p{
+    text-align: center;
+}
+
 /* Objetivos internos: Imagen arriba, Texto abajo (Flex-Col) */
 .Objetivo1, .Objetivo2, .Objetivo3 {
     display: flex;
     flex-direction: column; /* Alineación vertical */
     align-items: center;    /* Centra la imagen y el texto */
-    background-color: #FDF1E2;
     padding: 20px;
     border-radius: 10px;
     flex: 1;
     text-align: center;
-    border-bottom: 4px solid #3498db; /* Un detalle visual */
+    background-color: #f0e5d6;
 }
 
 .Objetivos img {
@@ -134,5 +217,12 @@ p {
 }
 
 .Objetivos_Titulo {
-    color: rgb(231, 169, 88);
+    font-family: 'Georgia', serif;      /* Tipografía elegante con serifas */
+    font-size: 24px;                    /* Tamaño intermedio y equilibrado */
+    font-weight: bold;                  /* Texto en negrita */
+    color: #112e38;                     /* El azul oscuro corporativo de AWANA */
+    text-transform: uppercase;          /* Fuerza a que todo sea mayúsculas */
+    letter-spacing: 4px;                /* Espaciado amplio entre letras (clave del diseño) */
+    text-align: center;                 /* Centrado en la página */
+    margin-bottom: 15px;
 }
